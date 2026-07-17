@@ -1,0 +1,35 @@
+# Node
+node_modules/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# React Build
+dist/
+build/
+
+# React
+frontend/node_modules/
+frontend/dist/
+
+
+# Jupyter
+.ipynb_checkpoints/
+notebook/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+data/
