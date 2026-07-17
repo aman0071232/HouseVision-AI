@@ -4,7 +4,7 @@ import HouseForm from "../components/HouseForm";
 import Stats from "../components/Stats";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-
+import Footer from "../components/Footer";
 
 function Home() {
   const location = useLocation();
@@ -31,7 +31,7 @@ function Home() {
       <div id="predict" className="max-w-7xl mx-auto px-8 pb-20">
         <HouseForm />
       </div>
-     
+     <Footer />
     </div>
   );
 }
