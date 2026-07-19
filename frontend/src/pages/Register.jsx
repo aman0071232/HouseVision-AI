@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../services/api";
 import { FaUser, FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
 
@@ -38,15 +38,15 @@ function Register() {
       setLoading(true);
 
       // Register User
-      await axios.post("http://127.0.0.1:5000/register", {
+      await api.post("/register", {
         name,
         email,
         password,
       });
 
       // Automatically Login
-      const loginRes = await axios.post("http://127.0.0.1:5000/login", {
-        email,
+const loginRes = await api.post("/login", {   
+       email,
         password,
       });
 

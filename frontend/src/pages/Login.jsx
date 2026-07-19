@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../services/api";
 import {
   FaEnvelope,
   FaLock,
@@ -29,8 +29,8 @@ export default function Login() {
     try {
       setLoading(true);
       setError("");
-      const res = await axios.post("http://127.0.0.1:5000/login", {
-        email,
+const res = await api.post("/login", {
+          email,
         password,
       });
       localStorage.setItem("token", res.data.token);
